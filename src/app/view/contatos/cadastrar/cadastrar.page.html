@@ -12,6 +12,11 @@
     <ion-item>
       <ion-input label="Telefone" placeholder="Insira o telefone" type="number" [(ngModel)]="telefone"></ion-input>
     </ion-item>
+    <ion-item>
+      <ion-button size="default" color="success" shape="round">
+        <input type="file" (change)="uploadFile($event.target)" />
+      </ion-button>
+    </ion-item>
     <ion-button expand="block" (click)="cadastrar()">Cadastrar</ion-button>
   </ion-list>
 </ion-content>

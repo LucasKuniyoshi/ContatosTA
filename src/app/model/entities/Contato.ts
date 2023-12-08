@@ -2,6 +2,7 @@ export default class Contato{
   private _id: string;
   private _nome: string;
   private _telefone: number;
+  private _downloadURL: any;
 
   constructor(nome: string, telefone: number){
     this._nome = nome;
@@ -26,6 +27,13 @@ export default class Contato{
   }
   public set telefone(value: number) {
     this._telefone = value;
+  }
+
+  public get downloadURL(): any {
+    return this._downloadURL;
+  }
+  public set downloadURL(value: any) {
+    this._downloadURL = value;
   }
 
 

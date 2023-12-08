@@ -15,6 +15,13 @@
     <ion-item>
       <ion-input label="Telefone" placeholder="Insira o telefone" type="number" [(ngModel)]="telefone" disabled="{{edicao}}"></ion-input>
     </ion-item>
+    <ion-item *ngIf="contato.downloadURL != null">
+      <img src="{{contato.downloadURL}}"/>
+    </ion-item>
+    <ion-button disabled="{{edicao}}" size="default" color="success" shape="round" >
+      <input type="file" (change)="uploadFile($event.target)" />
+    </ion-button>
+
     <ion-button expand="block" (click)="editar()" disabled="{{edicao}}">Salvar</ion-button>
     <ion-button expand="block" (click)="excluir()" disabled="{{edicao}}" color="danger">Excluir</ion-button>
   </ion-list>
